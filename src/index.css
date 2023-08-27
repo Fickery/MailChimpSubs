@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: inter, "Arial Narrow Bold", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Horizontally center the .cardMain */
+  align-items: center; /* Vertically center the .cardMain */
+  height: 100vh; /* Full viewport height */
+
+  padding: 50px;
+}
+
+.cardMain {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cardTop {
+  height: 28%;
+}
+
+.cardBottom {
+  height: 70%;
+}
+
+.subscription-card {
+  border: 1px solid #6d6d6d;
+  background-color: #fff;
+  padding: 20px;
+  flex: 1; /* Distribute available space evenly among cards */
+  max-width: 100%;
+  transition: box-shadow 0.3s, z-index 0.1s;
+}
+
+.subscription-card:nth-child(2),
+.subscription-card:nth-child(3),
+.subscription-card:nth-child(4) {
+  border-left: none;
+}
+
+.subscription-card:hover {
+  box-shadow: 0px 1px 23px -5px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 1px 23px -5px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 1px 23px -5px rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.cardDesc {
+  color: #818181;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing {
+  margin-top: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.subfeatures {
+  font-size: 13px;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: #868686; /* Adjust the color */
+  text-decoration-thickness: 0.5px; /* Adjust the thickness */
+  text-underline-offset: 5px;
+}
+
+.freetrial-text {
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #a7ff03;
+  text-decoration-thickness: 10px;
+  text-underline-offset: 5px;
+}
+
+.duration-text {
+  font-size: 13px;
+}
+
+.titlePrice-box {
+  margin-top: 20px;
+}
+
+.special-price-text {
+  position: relative;
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 700;
+  padding-left: 8px;
+}
+
+.standard-price-text {
+  position: relative;
+  font-size: 18px;
+  font-style: italic;
+  color: #868686;
+  padding-left: 8px;
+}
+
+.basedOn-text {
+  color: #868686;
+}
+
+.dollar-sign {
+  position: absolute;
+  font-size: 12px;
+  top: 5px;
+  left: 0;
+}
+
+.cents {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+li:last-of-type {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content: "\2714\0020";
+}
+
+.title,
+.pricing,
+.subfeatures {
+  flex: 1; /* Distribute available space equally */
+}
+
+.disabled {
+  color: #ababab;
+}
